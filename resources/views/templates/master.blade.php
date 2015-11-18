@@ -2,6 +2,7 @@
     <head>
         <title>@yield('title')</title>
 		<link rel="stylesheet" href="{{ asset('public/css/bootstrap.css') }}">
+		<link rel="stylesheet" href="{{ asset('public/css/app.css') }}">
 		<link rel="stylesheet" href="{{ asset('public/css/jquery.dataTables.min.css') }}">
 		
 		<script src="{{ asset('public/js/jquery.min.js') }}"></script>

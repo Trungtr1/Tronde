@@ -48,19 +48,14 @@
 				</ul>
 			</div>
 		@endif
-		<div class="row">
-			<div class="container">
-				<div class="col-lg-9 col-md-9" style="padding:0px">				
-					<div class="row">
-						<div class="col-lg-1 col-md-1" style="padding:0px;">
-							<button type="button" class="btn btn-primary glyphicon glyphicon-folder-open" data-toggle="modal" data-target="#myModal"></button>
-						</div>
-						<div class="col-lg-11 col-md-11" style="padding:0px;">
-							<p style="font-size:14pt">New Folder</p>
-						</div>
-					</div>				
-				</div>
-			</div>
+		<div class="row">			
+			<div class="col-lg-12 col-md-12">
+				<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-folder-open"></span> &nbsp;New Folder</button>
+				{!! Form::open(array('route' => 'upload.to.folder', 'method' => 'POST', 'class' => 'inline', 'id' => 'upload-question-form', 'files' => 'true' )) !!}
+				<input type="hidden" name="folderId" value="<?php echo $data['folder'][0]['id'] ?>">
+				<button type="button" class="btn btn-default relative"><span class="glyphicon glyphicon-cloud-upload"></span> <?=Form::file('docxFile', array('class' => 'upload-docx-file'));?>Upload</button>
+				{!! Form::close() !!}
+			</div>		
 		</div>
 		</br>
 		<?php if(!empty($data['children'])){ ?>
@@ -99,6 +94,8 @@
 					</div>
 					<div class="row">
 						<input type="text" name="name" class="form-control" value="" />
+						<input type="hidden" name="id" class="form-control" value="<?php echo $data['folder'][0]['id'] ?>" />
+						<input type="hidden" name="level" class="form-control" value="<?php echo $data['folder'][0]['level'] ?>" />
 					</div>					
 				{!! Form::close() !!}
 			</div>
@@ -113,5 +110,18 @@
 	$(document).on('click','#submit',function(){
 		$('#frm_newfolder').submit();
 	})
+	
+	$('.upload-docx-file').change(function(){
+		
+		path = $(this).val().split(/\\/);
+		
+		if (confirm('Bạn có chắc chắn muốn upload câu hỏi từ file '+(path[path.length-1])+' vào thư mục <?php echo $data['folder'][0]['name'] ?>?')) {
+		
+			$('#upload-question-form').submit();
+		
+		}
+	});
+	
+	
 </script>
 @endsection
