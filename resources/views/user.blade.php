@@ -1,6 +1,6 @@
 @extends('templates.master')
 
-@section('title', 'Login')
+@section('title', 'User')
 
 @section('content')
 <style>
@@ -86,13 +86,15 @@
 				</div>
 				</br>-->
 					<div class="row" style="background-color:#fff;padding:10px;">
-						<table style="width:100%;">
-							<tr>
-								<td style="width:160px;"><b>Tạo thư mục mới<b></td>
-								<td><input type="text" name="name" class="form-control" value="" placeholder="Tên Thư mục"/></td>
-								<td style="width:100px;"><input type="submit" class="btn btn-primary" style="float:right" name="submit" value="Tạo mới" /></td>
-							</tr>
-						</table>
+						{!! Form::open(array('method' => 'POST','style'=>'margin-bottom:0px;','id'=>'frm_newfolder')) !!}
+							<table style="width:100%;">
+								<tr>
+									<td style="width:160px;"><b>Tạo thư mục mới<b></td>
+									<td><input type="text" name="name" class="form-control" value="" placeholder="Tên Thư mục"/></td>
+									<td style="width:100px;"><input type="submit" class="btn btn-primary" style="float:right" name="submit" value="Tạo mới" /></td>
+								</tr>
+							</table>
+						{!! Form::close() !!}
 					</div>
 				<br/>
 				<div class="row" style="background-color:#fff;padding:10px;">
@@ -117,29 +119,7 @@
 		</div>
 	</div>	
 </div>
-<div class="modal fade" id="myModal" role="dialog">
-	<div class="modal-dialog">
-		<div class="modal-content">
-			<div class="modal-header">
-			  <button type="button" class="close" data-dismiss="modal">&times;</button>
-			  <h4 class="modal-title">Tạo Thư Mục Mới</h4>
-			</div>
-			<div class="modal-body">
-				{!! Form::open(array('method' => 'POST','style'=>'margin-bottom:0px;','id'=>'frm_newfolder')) !!}
-					<div class="row">
-						<label>Tên thư mục:</label>
-					</div>
-					<div class="row">
-						<input type="text" name="name" class="form-control" value="" />
-					</div>					
-				{!! Form::close() !!}
-			</div>
-			<div class="modal-footer">
-			  <button type="submit" class="btn btn-primary" id="submit" data-dismiss="modal">Tạo mới</button>
-			</div>
-		</div>	  
-	</div>
-</div>
+
 <div class="modal fade" id="addGroup" role="dialog">
 	<div class="modal-dialog">
 		<div class="modal-content">
@@ -164,9 +144,6 @@
 	</div>
 </div>
 <script type="text/javascript">
-	$(document).on('click','#submit',function(){
-		$('#frm_newfolder').submit();
-	})
 	$(document).on('click','#add_group',function(){
 		$('#frm_addGroup').submit();
 	})
