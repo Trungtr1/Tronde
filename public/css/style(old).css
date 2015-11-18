@@ -1,0 +1,950 @@
+
+/* general styles
+ * Change Log:
+ *  Mar 04, 2013	Dean Chan				Changed the style of the footer to center the footer to the page and make the links and headers of the footer a tiny bit larger.
+ *  Sep 20, 2012	Dean Chan				Added Img border:0 to the stylesheet to fix general ie issue with blue borders around linked images.
+ *  Jun 25, 2012	Karina Gonzales Ramos	Required field instructions
+ *  May 03, 2012	Karina Gonzales Ramos	Popup width resize, #popupContainer .box rule updated
+ *  Apr 25, 2012	Karina Gonzales Ramos	footer backgound #footer, width of #footer .col
+ *  Apr 16, 2012	Karina Gonzales Ramos	mainNav ul changes , the menu was tight in the header
+ *  Apr 02, 2012	Danny Roes		Created innerportlet h4 rule
+ *  Feb 22, 2012	Danny Roes		Adjusted taxmenu li margin, added nowrap
+ *  Jan 20, 2012	Karina Gonzales		#taxMenu li - Formatting the Tax Browser Page
+*/
+body{
+    background-color: #f0f6fa;
+    color:#404040;
+    font-family:Helvetica,Arial,Verdana,sans-serif;
+    min-width: 1000px;
+    margin:0;
+    padding:0;
+	position: relative;
+	min-height:100%;
+}
+
+body.careers{
+    background-color:#f7ffde;
+}
+
+img {
+	border:0px;
+}
+
+a,
+.toggle{
+    color:#4c9ac9;
+    cursor:pointer;
+    outline:0;
+    text-decoration:underline;
+}
+
+/*Karina Gonzales - Formatting the Tax Browser Page*/
+#taxMenu li {
+    font-family:Helvetica, Arial, Verdana, sans-serif;
+    /*font-size:8pt;*/
+    line-height:18px;
+    margin-left:-20px;
+    white-space: nowrap;
+}
+
+#taxMenu a,
+.toggle{
+    color:#4c9ac9;
+    cursor:pointer;
+    outline:0;
+    text-decoration:underline;
+}
+
+
+#taxMenu ul {
+    list-style-type: none;
+}
+
+#taxMenu lh {
+    font-family:Helvetica,Arial,Verdana,sans-serif;
+    font-size: 11pt;
+    margin-left: -15px;
+    line-height: 30px;
+    vertical-align: top;
+}
+
+.col{
+    display:inline;
+    float:left;
+}
+.col.last{
+    float:right !important;
+    margin-right:0 !important;
+    margin-left:20px;
+}
+.threeCol .col{
+    margin-right:42px;
+    width:292px;
+}
+.twoCol .col{
+    margin-right:42px;
+    margin-left:2px;
+    width:480px;
+}
+
+.left{
+    float:left;
+    margin:0 10px 10px 0;
+}
+.right{
+    float:right;
+    margin:0 0 10px10px;
+
+    /* text element styles */
+}
+
+p.caption{
+    color:#4c9ac9;
+    font-size:100%;
+    line-height:18px;
+}
+
+h1{
+    color:#036 !important;
+    font-family:"adelle",Helvetica,Arial,Verdana,sans-serif !important;
+    font-size:160% !important;
+    line-height:32px !important;
+    margin-bottom:21px !important;
+    font-weight:300 !important;
+}
+/*h2{
+    color:#036 !important;
+    font-family:"adelle",Helvetica,Arial,Verdana,sans-serif !important;
+    font-size:154% !important;
+    font-weight:300 !important;
+    line-height:21px !important;
+    margin-bottom:15px !important;
+}
+h3{
+    color: #7ca60a;
+    font-family:"adelle",Helvetica,Arial,Verdana,sans-serif !important; 
+    font-size:130%;
+    font-weight:300;
+    line-height:20px;
+    margin-bottom:15px;
+}
+h4{
+    color: #000 !important;
+    font-family:"adelle",Helvetica,Arial,Verdana,sans-serif !important; 
+    font-size:110% !important;
+    font-weight:bold !important;
+    line-height:20px !important;
+    margin-bottom:15px !important;
+}
+h5{
+    color:#7ca60a !important;
+    line-height:18px !important;
+    margin-bottom:2px !important;
+    text-transform:uppercase !important;
+}
+h2 em{
+    color:#7ca60a !important;
+    font-size:18px !important;
+    font-weight:300 !important;
+    font-style:normal !important;
+}
+*/
+/*table*/
+
+th {
+    font-weight: bold !important;
+    font-size: 10pt !important;
+}
+
+/*td {
+    font-size: 8pt !important;
+}*/
+td{
+	vertical-align:top;
+}
+
+/*clearfix*/
+.clearfix:after,
+.box:after,
+.oneCol:after,
+.twoCol:after,
+.threeCol:after,
+.fourCol:after,
+.featureItem:after,
+.featureList:after,
+.inner:after
+{
+    clear:both;
+    content:".";
+    display:block;
+    height:0;
+    line-height:0;
+    visibility:hidden;
+}
+.clearfix,
+.box,
+.oneCol,
+.twoCol,
+.threeCol,
+.fourCol
+{
+    display:block;
+    zoom:1;
+}
+
+/*display:block;
+}*/
+
+
+* html .clearfix,
+* html .box,
+* html .oneCol,
+* html .twoCol,
+* html .threeCol,
+* html .fourCol,
+* html .featureItem,
+* html .featureList,
+* html .inner,
+* html .centeredBlock,
+* html .toggleContent,
+* html .cf li,
+* html #overviewList li,
+* html .boxDefCTA,
+* html .videoList ul,
+* html #videoComments li{
+    height:1%;
+}
+/*default*/
+input{
+    outline:0;
+}
+
+#sideNav {
+    border-right: #bbbbbb;
+    border-right-style: dotted;
+    margin-right: 25px;
+    border-right-width: 1px;
+    min-width: 200px;	/*April 20, 2012 - Karina Gonzales  Keep the Left side bar with a max width*/
+    max-width: 300px;
+
+}
+
+#container{
+    min-width:960px;
+
+}
+
+#popupContainer{
+    min-width:600px;/*750px Karina*/
+}
+
+#header,#homeMidContent,#content,#sectionFooter,#footer{
+    width:100%;
+}
+
+#popupContainer .box{
+    display:block;
+    margin:0 30px;
+    /*float:left; Karina */
+    max-width:1500px; /*Still need to figure it out why there are horizontal scroll bars if the min-width is very small*/
+    min-width:500px;
+    width: 90%;
+}
+
+.box{
+    //display:block;
+    //margin:0 auto;
+    padding:0 10px;
+    //position:relative;
+    //min-width: 960px;
+    //width:80%;
+}
+
+.selectMenu {
+    height: 34px;
+    border: solid 2px #036!important;
+    border-right: none!important;
+    padding: 1px;
+    color: #666;
+    border: none;
+    font: 12px/21px arial,sans-serif;
+    overflow: hidden;
+}
+#search-control-container {
+	border: solid 2px #036;
+}
+.search-button{
+	height: 30px;
+	border: 0;
+	float: right;
+	background: #036;
+	color: #fff;
+	font-size: 15px;
+}
+/*header*/
+#header{
+    
+    //border-bottom:3px solid #57afe6;
+    color:#fff;
+    //height:65px;
+    //margin-bottom:40px;
+}
+#logo img {
+	width:100%;
+}
+.header-title {
+	color: #0B23B6;
+    padding: 10px 0;
+}
+/*
+#header #logo{
+    float:left;
+    margin:19px 0 0 -2px;
+    width:175px;
+    height:27px;
+}
+*/
+/* sujeevan */
+/*#header #logo a{
+    background:url('public/img/medLogo.png') no-repeat 0 0;
+    display:block;
+    text-indent:-9999px;
+    width:175px;
+    height:27px;
+}*/
+
+#homeMidContent{
+    background:#def1fa;
+    display:block;
+    margin:-40px 0 28px;
+    padding:40px 0 0;
+    position:relative;
+}
+
+#mainImage{
+
+    margin-top: -100px;
+    margin-left: -15px;
+    height: 390px;
+    width: 450px;
+}
+
+#mainNav{
+    left:220px;
+    position:absolute;
+    top:15px; /*Karina - before 14px change because in IE it is not displayed properly */
+    font-size:11px;
+
+}
+#mainNav li:first-child {
+	border-left:0;
+}
+/*sujeevan */
+#mainNav ul{
+    float:left;
+    list-style-type:none;
+    margin-left:-40px;  /*Karina Gonzales Ramos: before -40 , now -15 */
+	margin-top:20px;
+}
+
+/*sujeevan */
+#mainNav li{
+    border-left:1px solid #9fc71c;
+    float:left;
+    margin-left:-1px;
+}
+/*sujeevan */
+#mainNav a{
+    color:#cdeaf7;
+    display:block;
+    font-family:"adelle",Helvetica,Arial,Verdana,sans-serif;
+    font-size:142%;
+    font-weight:300;
+    line-height:19px;
+    padding:0 19px 0 15px;
+    text-decoration: none;
+}
+#mainNav .dropdown-menu {
+	margin-left: 0;
+    background-color: #DEF1FA;
+    border-radius: 0;
+    border: solid 1px #ADCBDA;
+    font-size: 10px;
+}
+#mainNav .dropdown-menu a {
+	color: #333;
+}
+.dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus {
+	background:none!important;
+}
+#mainNav .dropdown-menu li {
+	float:none;
+	border:0;
+}
+#mainNav .dropdown-menu li a {
+	padding: 3px 20px!important;
+}
+
+/*	
+#header a:hover{
+    color:#9fc71c;
+}
+#mainNav .selected a{
+    color:#9fc71c;
+}
+*/
+/*
+#subheader{
+    background:#def1fa;
+    display:block;
+    margin:-40px 0 28px;
+    padding-top: 1px;
+    padding-bottom: 18px;
+    position:relative;
+    height: 28px;;
+}
+
+#subheader h1{
+    line-height: 20px;
+}
+*/
+#globalNav {
+    color: #99aec7;
+    line-height: 17px;
+    float:right;
+    padding-right:6px;
+    padding-top:5px;
+    font-size:11;
+    font-family:Helvetica, Arial,Verdana,sans-serif;
+    vertical-align: top;
+    text-align: right;
+    width: 240px;
+}
+
+#globalNav a {
+    color: #99aec7;
+    line-height: 17px;
+    padding-right:6px;
+    padding-top:5px;
+    font-size:14px;
+    font-family:Helvetica, Arial,Verdana,sans-serif;
+    vertical-align: top;
+    text-decoration: none;
+}
+
+#globalNav a:hover {
+    text-decoration: underline;
+}
+
+/* front page */
+
+#homeMidContent .wrapper{
+    /*background:url(/libhtml/imagesv3/bgHeroHome.png) no-repeat center 100%; */
+    margin-top:-38px;
+}
+
+#intro button{
+    margin:29px 12px 0;
+}
+
+#mainStatement{
+    //background:url(/libhtml_v3/images/maingraphic/mainImageOverlay-50Percent.032013.png) no-repeat left;
+    color: white;
+    float:left;
+    width:900px;
+    padding-left: 16px;
+    padding-right: 26px;
+    height: 90px;
+}
+
+#mainStatementStats{
+    //background:url(/libhtml_v3/images/maingraphic/statsOverlay-50Percent.032013.png) no-repeat left;
+    color: white;
+    float:left;
+    width:900px;
+    padding-left: 16px;
+    padding-right: 26px;
+    height: 90px;
+}
+
+#noticeBoard{  /* This div is used when there is notice that needs to be display on the home page */
+    //background:url(/libhtml_v3/images/maingraphic/alert_box.png) no-repeat left;
+    color:red;
+    float:right;
+    max-width: 533px;
+    width: 36%;
+    /*width: 533px;    This is 20px less than the image*/
+    height: 361px;
+    padding-left: 6px;
+    padding-right: 6px;
+}
+
+
+#mainStatement h1{
+    color:#036;
+    font-family:"adelle",Helvetica,Arial,Verdana,sans-serif;
+    font-size:70%;
+    line-height:30px;
+    margin-bottom:21px;
+    font-weight:100;
+}
+
+#intro .col{
+    //background:url(/libhtml_v3/images/maingraphic/mainImageOverlay-50Percent.png) no-repeat left;
+    color: white;
+    float:left;
+    width:80px;
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 359px;
+}
+#intro .col.last{
+    float:right;
+    position:relative;
+
+    top:-2px;
+    background: none
+}
+#homeMidContent #intro .col.last{
+
+    top:2px;
+}
+
+#home #homeBottomContent {
+    //background:url(/libhtml_v3/images/bgHomeContentBox.png);
+    height: 300px;
+    padding-left: 4px;
+    padding-right: 4px;
+    width: 960px;
+}
+
+#home #homeMidContent{
+    margin-bottom:46px;
+}
+#home #footer{
+    margin-top:48px;
+}
+#homeMidContent #intro{
+    min-height:386px;
+	height:386px;
+    /*padding:18px 0 14px;*/
+	padding:0;
+    position:relative;
+}
+#homeMidContent .col{
+    width:476px;
+}
+#homeMidContent #intro h1{
+    font-size:180%;
+    line-height:38px;
+    margin-bottom:20px;
+    color: #f6fff8;
+    text-shadow: 1px -1px 1px black;
+    font-weight:300;
+}
+#homeMidContent #intro p{
+    color: white;
+    font-family:"adelle",Helvetica,Arial,Verdana,sans-serif;
+    text-shadow: 1px -1px 1px black;
+    font-size:120%;
+    line-height:31px;
+}
+#homeMidContent #intro .col.last{
+    background-position:center;
+    bottom:0;
+    display:inline-block;
+    height:32px;
+    padding:157px 14px 264px;
+    position:absolute;
+    right:60px;
+    top:auto;
+    width:356px;
+}
+#homeMidContent #intro .col.last p{
+    color:#036;
+    font-family:"adelle",Helvetica,Arial,Verdana,sans-serif;
+    font-size:13px;
+    height:32px;
+    line-height:28px;
+
+    margin:0;
+    padding:0;
+    text-align:center;
+}
+#homeMidContent #intro .col.last p strong{
+    font-size:17px;
+    font-weight:700;
+}
+#homeMidContent #intro .col .centeredBlock{
+    margin-left:10px;
+}
+
+
+#intro p.caption{
+    font-size:14px;
+    line-height:14px;
+    margin:1px 0 0;
+}
+
+/* portlet */
+#portletContents table {
+    margin: 0px;
+    font-size: 10;
+    width: 100%;
+    font-family:Helvetica,Arial,Verdana,sans-serif;
+    border-collapse: collapse;
+    text-align: left;
+}
+#portletContents td, th {
+    border-top: 1px;
+    border-top-color: black;
+    padding: 1px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+#portletContents tr td {
+    border-bottom:1px solid #eeeeee;
+}
+
+#portletContents th {
+    padding-top: 3px;
+    padding-bottom: 3px;
+
+}
+
+#portletContents thead {
+    background-color: #eeeeee;
+}
+
+#portletContents p {
+    font-family:Helvetica,Arial,Verdana,sans-serif;
+    font-size:12px;
+}
+
+.innerPortlet h4 {
+    font-size: 1.1em;
+    padding: 3px;
+    padding-left: 22px;
+}
+/* footer */
+
+.dashedLine{
+    border-top: 1px dashed;
+}
+#footer{
+    background:#036;/*repeat-x*/
+    color:#fff;
+	/*height:40px;*/
+	position:absolute;
+	padding: 10px 0;
+	left:0;
+	bottom:-70px;
+	/*line-height:40px;*/
+	text-align:center;
+}
+
+#footer .box{
+    padding:47px 0 27px;
+}
+
+#footer .box table{
+	margin:0px auto;
+}
+
+#footer .col{
+    float:left;
+    margin:0 40px 0 0;
+    min-width: 15%;/*150px;*/
+    text-align: left;
+
+}
+#footer h4{
+    /*border-bottom:1px solid #275783;*/
+    color:#7ca60a !important;
+    font-family:"adelle",Helvetica,Arial,Verdana,sans-serif !important;
+    font-size:13px !important;
+    font-weight:100 !important;
+    line-height:16px !important;
+    /*margin-bottom:2px;
+    padding-bottom:5px;*/
+    margin-bottom:9px !important;
+    border-bottom:1px solid #275783 !important;
+    text-transform:uppercase !important;
+}
+#footer h4 a{
+    color:#7ca60a;
+}
+#footer h4 a:hover{
+    text-decoration:none;
+}
+#footer ul{
+
+    padding:16px 0;
+    list-style-type:none;
+}
+#footer li{
+    margin-bottom:8px;
+    line-height:18px;
+	font-size:12px;
+}
+#footer a{
+    text-decoration:none;
+}
+#footer a:hover{
+    color:#4c9ac9;
+    text-decoration:underline;
+}
+#footer a.cta{
+    font-size:9px;
+    text-transform:uppercase;
+}
+#footer a.cta span{
+    color:#9bb907;
+    font-size:12px;
+}
+#footer .col.last p{
+    font-size:11px;
+    line-height:11px;
+    margin:0 0 5px;
+}
+
+.footerMenu {
+    padding:0 20px 0 20px;
+    min-width: 15%;/*150px;*/
+    text-align: left;
+}
+
+#footer #copyright {
+	padding-left:20px;
+	color:#2b5d88;
+    /*    color:#99aec7;*/
+}
+
+/* Barcodecluster page styles
+border="0" cellpadding="0" cellspacing="4" class="binDataTable" style="font-size:12px"
+*/
+
+/* Login/logout dropdown menu */
+#usermenu {
+    background:#def1fa;
+}
+
+#usermenu a {
+    color: #4c9ac9;
+}
+
+#usermenu a:hover {
+    color: #4c9ac9;
+}
+
+.binDataTable thead th {
+    color: #444444;
+    background-color: #c7d1da;
+}
+
+/*Specimen or Sequence Datatables*/
+.BOLDDataTable tbody th {
+    text-decoration:underline;
+    font-weight: normal;		/* overwrite general th format*/
+    vertical-align:text-top;
+}
+
+.identifiers thead th{
+    color: #444444;
+    background-color: #FFCC00;
+}
+.taxonomy thead th{
+    color: #444444;
+    background-color: #9999FF;
+}
+.specimenDetails thead th{
+    color: #444444;
+    background-color: #D1732E;
+}
+.annotation thead th{
+    color: #444444;
+    background-color: #A8A8A8;
+}
+
+.photographs thead th{
+    color: #444444;
+    background-color: #9CCFFF;
+}
+.attributions thead th{
+    color: #444444;
+    background-color: #9CCF63;
+}
+.geography thead th{
+    color: #444444;
+    background-color: #FFCCCC;
+}
+.collectionData thead th{
+    color: #444444;
+    background-color: #9CCF63;
+}
+
+.seqData thead th {
+    color: #FFFFFF;
+    background-color: #660099;
+}
+.nucleotideData thead th{
+    color: #444444;
+    background-color: #9CCF63;
+}
+
+.aminoAcidData thead th{
+    color: #444444;
+    background-color: #9CCFFF;
+}
+
+.sequencingData thead th{
+    color: #444444;
+    background-color: #9999FF;
+}
+
+.illustrativeBarcode thead th{
+    color: #444444;
+    background-color: #9CCF63;
+}
+
+.LIMS thead th{
+    color: #444444;
+    background-color: #9CCF63;
+}
+
+.publication thead th{
+    color: #444444;
+    background-color: #FFCC00;
+}
+
+.tracefile{
+    font-size: smaller;
+}
+
+/*Standarized the look and field for required fields*/
+span.requiredField{
+    color: red;
+}
+
+span.requiredField:after{
+    color: red;
+    content:" *";
+}
+
+/*.reqFieldInstruction:after{
+    content:"Required fields for submission are marked with a red asterisk.";
+}*/
+
+.reqFieldGenMsg:after{
+    content:"Required fields are marked with a red asterisk.";
+}
+
+.reqFieldSubMsg:after{
+    content:"Required fields for submission are marked with a red asterisk.";
+}
+
+div.roundBox{
+    margin: 5px;
+    padding: 5px;
+    border-radius: 0.85em;
+    /*box-shadow: #11479F 0.5em 0.5em 0.5em;*/
+    background-color: #FFFFFF; /*#FFFFFF;*/
+    border: solid #AECCEF 0.50em; /*#EEB052 */
+    /*border: solid #8ba4d5 0.20em;*/
+    color: #000/*#002A5C;*/
+
+}
+.purple{/*This will change the border color to orange for out roundBox by adding this class along with the roundbox */
+	border-color: #AECCEF !important;
+}
+.page-title {
+	margin-top:7px;
+	text-transform: uppercase;
+}
+.w-100 {
+	width:100px!important;
+}
+.w-200 {
+	width:200px!important;
+}
+.form-table td  {
+	font-size:14px!important;
+	padding-bottom: 15px;
+}
+#main-menu li {
+	text-transform:uppercase;
+}
+#table-contents.affix {
+	top: 20px;
+}
+.center {
+	text-align:center;
+}
+.member-info {
+	padding-left: 5px;
+    float: left;
+    font-size: 13px;
+}
+.member-info p {
+	margin-bottom:5px;
+}
+.member-info h4 {
+    color: blue;
+    margin-top: 3px;
+    margin-bottom: 5px;
+}
+.member-info .more-info {
+	font-size:13px;
+}
+.member-info-container {
+    padding: 10px;
+    border: solid 1px #EEE;
+    height: 140px;
+	margin-bottom: 20px;
+}
+.home-left-info {
+    color: #fff;
+    padding: 20px;
+    font-size: 13px;
+}
+.text-error {
+	display: none;
+}
+.borderless td, .borderless th {
+    border: none!important;
+}
+.pdl-0 {
+	padding-left: 0!important;
+}
+.pdr-0 {
+	padding-right: 0!important;
+}
+.search-result-item p {
+    margin-bottom: 2px;
+}
+.search-result-item {
+	margin-bottom: 10px;
+}
+#main-menu .dropdown-menu li a {
+	text-transform: capitalize;
+}
+.search-box {
+	position: absolute;
+    top: 100%;
+    width: 100%;
+    background: #fff;
+    border: solid 1px #036;
+    z-index: 100;
+   padding: 14px 15px 0;
+    border-top: 0;
+	    border: 1px solid #ccc;
+    border: 1px solid rgba(0, 0, 0, .15);
+   display:none;
+    -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+}
+
+.static-page-content img {
+	max-width:80% !important;
+}
