@@ -34,3 +34,7 @@ Route::post('/folder',['uses' => 'FolderController@create_folder', 'middleware' 
 Route::post('/folder/upload',['as' => 'upload.to.folder', 'uses' => 'FolderController@uploadQuestion', 'middleware' => ['auth']]);
 
 Route::get('/group',['uses' => 'GroupController@index', 'middleware' => ['auth']]);
+
+Route::get('/test', ['uses' => 'TestController@index', 'middleware' => ['auth']]);
+
+Route::get('/answer', ['uses' => 'TestController@answers', 'middleware' => ['auth']]);
