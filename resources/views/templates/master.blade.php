@@ -10,7 +10,8 @@
 		<script src="{{ asset('public/js/jquery.dataTables.min.js') }}"></script>
 		<script src="{{ asset('public/js/app.js?v=1.1') }}"></script>
     </head>
-    <body style="background-color:#F5F5F5;">
+    <!--<body style="background-color:#F5F5F5;">-->
+	<body>
 		<style>
 			#header{
 				background-color:#428bca;

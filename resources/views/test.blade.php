@@ -37,6 +37,7 @@
 					<?php if($ans['order']==1){ echo "B.";} ?>
 					<?php if($ans['order']==2){ echo "C.";} ?>
 					<?php if($ans['order']==3){ echo "D.";} ?>
+					<?php if($ans['order']==4){ echo "E.";} ?>
 					<?php echo $ans['content'] ?>
 				</div>
 			<?php } ?>		

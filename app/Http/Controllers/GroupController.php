@@ -20,9 +20,25 @@ use File;
 			
 			$viewData['user']=$user;
 			
-			$viewData['group'] = DB::table('folders')->where('id',$id)->get();						
+			$viewData['folder'] = DB::table('folders')->where('id',$id)->get();						
 			
-			$viewData['children'] = DB::table('folders')->where('parent',$id)->get();
+			$viewData['children'] = DB::table('folders')->where('parent',$id)->where('categories',0)->get();
+			
+			$n = $viewData['folder'][0]['level'];
+			
+			$parent = $viewData['folder'][0]['parent'];
+			
+			if($n>1)
+			{
+				for($i=1;$i<$n;$i++)
+				{
+					$data_parent = DB::table('folders')->where('id',$parent)->get();
+					$viewData['parent'][$n-$i] = $data_parent[0];
+					$parent = $data_parent[0]['parent'];
+				}
+			}
+			
+			$viewData['files'] = DB::table('folders')->where('parent',$id)->where('categories',1)->get();
 
 			return view('group')->with('data',$viewData);
 		}

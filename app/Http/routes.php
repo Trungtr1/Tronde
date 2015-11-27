@@ -25,13 +25,17 @@ Route::get('/user', ['uses' => 'UserController@index', 'middleware' => ['auth']]
 
 Route::post('/user',['uses' => 'UserController@create_folder', 'middleware' => ['auth']]);
 
-Route::put('/user', ['uses' => 'UserController@create_group', 'middleware' => ['auth']]);
-
 Route::get('/folder',['uses' => 'FolderController@index', 'middleware' => ['auth']]);
 
 Route::post('/folder',['uses' => 'FolderController@create_folder', 'middleware' => ['auth']]);
 
-Route::post('/folder/upload',['as' => 'upload.to.folder', 'uses' => 'FolderController@uploadQuestion', 'middleware' => ['auth']]);
+Route::post('/file/upload',['as' => 'upload.to.file', 'uses' => 'FileController@uploadQuestion', 'middleware' => ['auth']]);
+
+Route::post('/folder/mix',['as' => 'mix.to.folder', 'uses' => 'FileController@mixQuestion', 'middleware' => ['auth']]);
+
+Route::get('/file',['uses' => 'FileController@index', 'middleware' => ['auth']]);
+
+Route::post('/file',['as' => 'add.file','uses' => 'FileController@create_file', 'middleware' => ['auth']]);
 
 Route::get('/group',['uses' => 'GroupController@index', 'middleware' => ['auth']]);
 
