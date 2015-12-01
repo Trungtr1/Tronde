@@ -1,5 +1,4 @@
 <?php
-	/*
 	header("Pragma: public"); // required
 	header("Expires: 0");
 	header("Cache-Control: must-revalidate, post-check=0, pre-check=0");
@@ -10,15 +9,11 @@
 	header("Content-Type: application/download");
 	header("Content-Disposition: attachment; filename=test.doc");
 	header("Content-Transfer-Encoding: binary");
-	*/
 ?>
 <html>
 <style>
-	.section1{
-		width:840px;
-		padding:10px 50px 10px 50px;
-		border:3px double #000;
-	}
+	@page section1 {size:595.45pt 841.7pt; margin:1.0in 1.25in 1.0in 1.25in;mso-header-margin:.5in;mso-footer-margin:.5in;mso-paper-source:0;}
+	div.section1 {page:section1;}
 	.bold{
 		font-size: 14pt;
 	}
@@ -47,9 +42,9 @@
 					<tr>
 						<td>
 							<span style="color:#142CAB">
-								Họ tên học sinh:.........................................................................................
-								SBD:................................
-								Lớp:..................
+								Họ tên học sinh:.........................................................
+								SBD:..................
+								Lớp:............
 							</span>
 						</td>
 					</tr>
@@ -102,7 +97,7 @@
 					</tr>
 					<tr>
 						<td>
-							<div style="margin-top:20px; border:2px solid #000;width:120px;padding:5px 10px 5px 10px">
+							<div style="margin-top:20px;">
 								<b class="bold">Mã đề: <?php echo $data['tests'][0]['code'] ?></b>
 							</div>
 						</td>
@@ -131,16 +126,6 @@
 				</table>
 			</div>	
 		</div>
-		<div>
-			<div style="margin-top:10px;">
-				{!! Form::open(array('method' => 'POST','id' => 'frm-test', 'files' => 'true' )) !!}
-					<input type="hidden" name="test_id" value="<?php echo $data['tests'][0]['id'] ?>" />
-					<input type="submit" name="submit" style="height:40px;width:200px;" value="DOWNLOAD" />
-				{!! Form::close() !!}
-			</div>
-		</div>
-		<br>
-		<br>
 	</div>
 </body>
 <html>

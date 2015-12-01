@@ -166,7 +166,34 @@
 													<div class="row">
 														<input type="text" name="number_questions" class="form-control" value="" />
 													</div>
-												
+													<br/>
+													<div class="row">
+														<label>Tên đơn vị:</label>
+													</div>
+													<div class="row">
+														<input type="text" name="school" class="form-control" value="" />
+													</div>
+													<br/>
+													<div class="row">
+														<label>Tiêu đề:</label>
+													</div>
+													<div class="row">
+														<input type="text" name="title" class="form-control" value="" />
+													</div>
+													<br/>
+													<div class="row">
+														<label>Tên môn:</label>
+													</div>
+													<div class="row">
+														<input type="text" name="subject" class="form-control" value="" />
+													</div>
+													<br/>
+													<div class="row">
+														<label>Thời gian:</label>
+													</div>
+													<div class="row">
+														<input type="text" name="time" class="form-control" value="" />
+													</div>
 											</div>
 											<div class="modal-footer">
 											  <button type="submit" class="btn btn-primary" id="mixed" data-dismiss="modal">Đã Xong</button>

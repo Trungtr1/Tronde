@@ -134,6 +134,10 @@ use File;
 						
 						$inputData1 = array(
 								'name' 		=> "Đề ".$number_test,
+								'school'	=> $request['school'],
+								'title'		=> $request['title'],
+								'subject'	=> $request['subject'],
+								'time'		=> $request['time'],
 								'date'		=> date('Y-m-d'),
 								'categories'=> 1,
 							);
@@ -174,7 +178,7 @@ use File;
 														'order'				=> $key2,
 														'test_id'			=> $test_id,
 													);
-											DB::table('test_answers')->insert($inputData3);											
+											DB::table('test_answers')->insert($inputData3);									
 										}
 									}
 								}																
